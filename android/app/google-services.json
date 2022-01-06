@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "83543072300",
+    "firebase_url": "https://nammudevipani-e10d3.firebaseio.com",
+    "project_id": "nammudevipani-e10d3",
+    "storage_bucket": "nammudevipani-e10d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83543072300:android:44604555f07abc719f3b89",
+        "android_client_info": {
+          "package_name": "com.application.NammudeVipani"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83543072300-rbgtp3oem5hqr03lq7pku28diuo1gqu2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5PNN2528_HYE7P73_puN9IOh6cwz4KTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83543072300-rbgtp3oem5hqr03lq7pku28diuo1gqu2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
