@@ -25,7 +25,7 @@ import 'package:upgrader/upgrader.dart';
 import './src/shared/styles.dart';
 import './src/shared/fryo_icons.dart';
 import 'config/api.dart';
-
+//
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext context) {
