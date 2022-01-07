@@ -132,15 +132,15 @@ class _LoginPageState extends State<LoginPage> {
                           onPressed: submit,
                         ),
                         _divider(),
-                        StyledFlatButton(
-                          'OTP Login',
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => OtpPage()));
-                          },
-                        ),
+                        // StyledFlatButton(
+                        //   'OTP Login',
+                        //   onPressed: () {
+                        //     Navigator.push(
+                        //         context,
+                        //         MaterialPageRoute(
+                        //             builder: (context) => OtpPage()));
+                        //   },
+                        // ),
                         SizedBox(
                           height: 10,
                         ),
@@ -204,7 +204,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          Text('or'),
+          // Text('or'),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
