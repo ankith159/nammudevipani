@@ -225,25 +225,29 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
       alignment: Alignment.bottomCenter,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Don\'t have an account ?',
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'Don\'t have an account ?',
+                style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+            ],
           ),
-          SizedBox(
-            width: 10,
-          ),
-          InkWell(
-            onTap: () {
+          ElevatedButton(
+            onPressed: () {
               Navigator.pushReplacementNamed(context, '/register');
             },
             child: Text(
               'Register',
               style: TextStyle(
-                  color: primaryColor,
-                  fontSize: 13,
+                  color: Colors.white,
+                  fontSize: 16,
                   fontWeight: FontWeight.w600),
             ),
           )
