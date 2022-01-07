@@ -276,18 +276,18 @@ class _CheckOutPageState extends State<CheckOutPage> {
                             EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                         child: RaisedButton(
                           onPressed: () async {
-                            if (ScopedModel.of<CartModel>(context,
-                                        rebuildOnChange: true)
-                                    .totalCartValue <
-                                250) {
-                              showDialog(
-                                  context: context,
-                                  builder: (context) => AlertDialog(
-                                        title: Text(
-                                            'Minimum order value is Rs.250'),
-                                      ));
-                              return;
-                            }
+                            // if (ScopedModel.of<CartModel>(context,
+                            //             rebuildOnChange: true)
+                            //         .totalCartValue <
+                            //     250) {
+                            //   showDialog(
+                            //       context: context,
+                            //       builder: (context) => AlertDialog(
+                            //             title: Text(
+                            //                 'Minimum order value is Rs.250'),
+                            //           ));
+                            //   return;
+                            // }
                             bool _serviceEnabled;
                             PermissionStatus _permissionGranted;
                             LocationData _locationData;

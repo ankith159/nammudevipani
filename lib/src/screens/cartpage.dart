@@ -132,30 +132,56 @@ class _CartPageState extends State<CartPage> {
                       elevation: 0,
                       child: Text("BUY NOW"),
                       onPressed: () async {
+                        if (ScopedModel.of<CartModel>(context,
+                                    rebuildOnChange: true)
+                                .totalCartValue <
+                            300) {
+                          showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                    title:
+                                        Text('Minimum order value is Rs.300'),
+                                  ));
+                          return;
+                        }
                         // ignore: unrelated_type_equality_checks
-                        deviceTokenUpdate(token);
-
+                        print(token);
                         if (token != null) {
-                          if (ScopedModel.of<CartModel>(context,
-                                      rebuildOnChange: true)
-                                  .totalCartValue <
-                              300.00) {
-                            Fluttertoast.showToast(msg: 'Min value is Rs 300');
-                          } else
-                            Navigator.push(
+                          deviceTokenUpdate(token);
+                          Navigator.push(
                               context,
                               new MaterialPageRoute(
-                                builder: (context) => CheckOutPage(),
-                              ),
-                            );
+                                  builder: (context) => CheckOutPage()));
                         } else {
                           Navigator.push(
-                            context,
-                            new MaterialPageRoute(
-                              builder: (context) => LoginPage(),
-                            ),
-                          );
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (context) => LoginPage()));
                         }
+
+                        // deviceTokenUpdate(token);
+
+                        // if (token != null) {
+                        //   if (ScopedModel.of<CartModel>(context,
+                        //               rebuildOnChange: true)
+                        //           .totalCartValue <
+                        //       300.00) {
+                        //     Fluttertoast.showToast(msg: 'Min value is Rs 300');
+                        //   } else
+                        //     Navigator.push(
+                        //       context,
+                        //       new MaterialPageRoute(
+                        //         builder: (context) => CheckOutPage(),
+                        //       ),
+                        //     );
+                        // } else {
+                        //   Navigator.push(
+                        //     context,
+                        //     new MaterialPageRoute(
+                        //       builder: (context) => LoginPage(),
+                        //     ),
+                        //   );
+                        // }
                       },
                     ),
                   ),
