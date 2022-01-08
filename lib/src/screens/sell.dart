@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:foodexpress/providers/auth.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -121,11 +122,10 @@ class _SellPageState extends State<SellPage> {
                                     var resp = await req.send();
                                     print(resp.statusCode);
                                     if (resp.statusCode == 200) {
-                                       ScaffoldMessenger.of(context)
+                                      ScaffoldMessenger.of(context)
                                           .showSnackBar(SnackBar(
                                               content: Text('Product added')));
                                       Navigator.pop(context);
-                                        
                                     }
                                   }
                                 }
@@ -138,13 +138,18 @@ class _SellPageState extends State<SellPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                      children: List.generate(
-                    1,
-                    (index) => Text(
-                      products['sell_product_content']['desription'].toString(),
-                    ),
-                  )),
+                  child: Column(children: [
+                    Html(
+                        data: products['sell_product_content']['desription']
+                            .toString())
+                  ]
+                      //      List.generate(
+                      //   1,
+                      //   (index) => Text(
+                      //     products['sell_product_content']['desription'].toString(),
+                      //   ),
+                      // )
+                      ),
                 ),
               ],
             ),

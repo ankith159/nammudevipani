@@ -128,7 +128,7 @@ class _OrderHistoryPageState extends State<OrderPage> {
   Future<Void> orderUpdate(String id, String status, token) async {
     final url = "$api/orders/cancel/$id";
     // print(token);
-    final response = await http.get(Uri.parse(url), headers: {
+    final response = await http.put(Uri.parse(url), headers: {
       HttpHeaders.acceptHeader: "application/json",
       HttpHeaders.authorizationHeader: 'Bearer $token'
     });
